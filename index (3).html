@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MàrCAT — Mercats de segona mà i brocanters de Catalunya</title>
+  <meta name="description"
+    content="MàrCAT és l'aplicació per descobrir mercats de segona mà,
+    brocanters i artesania a Catalunya.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Botons de descàrrega: un al costat de l'altre (i un sota l'altre
+       en mòbil). Reutilitzen la classe .badge de style.css. */
+    .botons-descarrega {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .botons-descarrega a.badge {
+      color: #ffffff;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Botó de la versió web (iPhone): mateixa forma, en verd. */
+    .botons-descarrega a.badge.web {
+      background: #2E7D32;
+      border-color: #2E7D32;
+    }
+    .nota-iphone {
+      margin-top: 14px;
+      font-size: 0.9em;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="index.html" class="logo">MàrCAT</a>
+    <nav>
+      <a href="index.html">Inici</a>
+      <a href="privacitat.html">Privacitat</a>
+      <a href="termes.html">Condicions</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>MàrCAT</h1>
+    <p class="subtitol">
+      Descobreix els mercats de segona mà, brocanters i artesania
+      de tot Catalunya. Troba'ls, guarda'ls i no et perdis cap edició.
+    </p>
+
+    <div class="botons-descarrega">
+      <a class="badge"
+        href="https://play.google.com/store/apps/details?id=com.mercat.mercat&pcampaignid=web_share"
+        target="_blank" rel="noopener noreferrer">
+        Descarrega-la a Google Play
+      </a>
+      <a class="badge web"
+        href="https://app.marcat.app"
+        target="_blank" rel="noopener noreferrer">
+        Versió web per a iPhone
+      </a>
+    </div>
+
+    <p class="nota-iphone">
+      Tens iPhone? Obre la versió web amb Safari, toca
+      <strong>Compartir</strong> i després
+      <strong>Afegeix a la pantalla d'inici</strong>.
+      La tindràs com una app més.
+    </p>
+  </section>
+
+  <div class="container">
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon">🗺️</div>
+        <h3>Explora</h3>
+        <p>Mercats de les quatre províncies catalanes, amb mapa i
+          rutes per arribar-hi fàcilment.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">❤️</div>
+        <h3>Guarda els teus preferits</h3>
+        <p>Marca els mercats que t'interessen i rep recordatoris
+          abans de cada edició.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⭐</div>
+        <h3>Ressenyes</h3>
+        <p>Valora els mercats i descobreix l'opinió d'altres
+          visitants.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <h3>Notificacions</h3>
+        <p>Assabenta't de canvis d'horari, cancel·lacions o nous
+          mercats a prop teu.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">✅</div>
+        <h3>Informació verificada</h3>
+        <p>Dades confirmades pels mateixos organitzadors i contacte
+          directe per WhatsApp per resoldre qualsevol dubte.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📊</div>
+        <h3>Per a organitzadors</h3>
+        <p>Publica el teu mercat, avisa de vacances o cancel·lacions
+          i consulta les estadístiques de visites.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2026 MàrCAT ·
+      <a href="privacitat.html">Política de Privacitat</a> ·
+      <a href="termes.html">Termes i Condicions</a>
+    </p>
+    <p style="margin-top:8px;">Contacte: marcatapp.26@gmail.com</p>
+  </footer>
+
+</body>
+</html>
