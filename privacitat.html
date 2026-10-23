@@ -1,197 +1,322 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" class="sense-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Política de Privacitat — MàrCAT</title>
-  <link rel="icon" href="https://marcat.app/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="96x96" href="https://marcat.app/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="https://marcat.app/favicon-48x48.png">
-  <link rel="apple-touch-icon" href="https://marcat.app/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
+  <title>Política de privacitat · MàrCAT</title>
+  <meta name="description" content="Com tracta MàrCAT les teves dades personals: quines dades, per a què, amb qui i quins drets tens.">
+  <meta name="theme-color" content="#2D4A3E">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/css/web.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">MàrCAT</a>
-    <nav>
-      <a href="index.html">Inici</a>
-      <a href="privacitat.html">Privacitat</a>
-      <a href="termes.html">Condicions</a>
-    </nav>
+  <header class="capcalera">
+    <div class="contenidor">
+      <a class="marca" href="./" aria-label="MàrCAT, inici">
+        <img src="assets/img/logo-128.png" alt="" width="36" height="36">
+        MàrCAT
+      </a>
+      <nav class="menu" aria-label="Menú principal">
+        <a href="./">Inici</a>
+        <a href="termes.html">Condicions</a>
+        <a class="boto-petit" href="./#descarrega">Descarrega</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container legal">
-    <h1>Política de Privacitat</h1>
-    <p class="data-actualitzacio">Última actualització:
-      <span class="destacat">28/08/2026</span>
-    </p>
+  <main class="document">
 
-    <p>Aquesta Política de Privacitat descriu com es recullen,
-      s'utilitzen i es protegeixen les teves dades personals quan fas
-      servir l'aplicació mòbil <strong>MàrCAT</strong> (d'ara endavant,
-      "l'aplicació" o "MàrCAT").</p>
+    <div class="capcal-doc">
+      <span class="avantitol">Informació legal</span>
+      <h1>Política de privacitat</h1>
+      <p class="data-actualitzacio">Última actualització: 23 d'octubre de 2026</p>
+    </div>
 
-    <p>En fer servir MàrCAT, acceptes les pràctiques descrites en
-      aquesta política. Si no hi estàs d'acord, si us plau, no facis
-      servir l'aplicació.</p>
+    <p>Aquesta política explica com es tracten les teves dades personals
+      quan fas servir <strong>MàrCAT</strong>: l'aplicació per a Android,
+      la versió web (<a href="https://app.marcat.app">app.marcat.app</a>)
+      i aquesta pàgina web (<a href="https://marcat.app">marcat.app</a>).
+      L'hem escrit perquè s'entengui: si tens cap dubte, escriu-nos.</p>
 
-    <h2>1. Responsable del tractament</h2>
-    <p>El responsable del tractament de les teves dades personals és:</p>
+    <nav class="index-doc" aria-label="Índex">
+      <strong>Índex</strong>
+      <ol>
+        <li><a href="#responsable">Qui és el responsable</a></li>
+        <li><a href="#dades">Quines dades tractem</a></li>
+        <li><a href="#publiques">Què veuen els altres usuaris</a></li>
+        <li><a href="#finalitats">Per a què i amb quina base legal</a></li>
+        <li><a href="#avisos">Notificacions i avisos</a></li>
+        <li><a href="#proveidors">Amb qui les compartim</a></li>
+        <li><a href="#transferencies">On s'emmagatzemen</a></li>
+        <li><a href="#conservacio">Quant de temps les guardem</a></li>
+        <li><a href="#galetes">Galetes i emmagatzematge local</a></li>
+        <li><a href="#drets">Els teus drets</a></li>
+        <li><a href="#seguretat">Seguretat</a></li>
+        <li><a href="#menors">Menors d'edat</a></li>
+        <li><a href="#canvis">Canvis en aquesta política</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="responsable">1. Qui és el responsable</h2>
+    <p><strong>Responsable:</strong> Hector Parlón Polo<br>
+      <strong>Correu de contacte:</strong>
+      <a href="mailto:marcatapp.26@gmail.com">marcatapp.26@gmail.com</a></p>
+    <p>Per a qualsevol qüestió sobre les teves dades o sobre aquesta
+      política, escriu a aquest correu.</p>
+
+    <h2 id="dades">2. Quines dades tractem</h2>
+
+    <h3>2.1. Dades que ens dones tu</h3>
     <ul>
-      <li><strong>Responsable:</strong>
-        <span class="destacat">Hector Parlón Polo</span></li>
-      <li><strong>Correu de contacte:</strong> marcatapp.26@gmail.com</li>
-    </ul>
-    <p>Per a qualsevol qüestió relacionada amb la teva privacitat o amb
-      aquesta política, pots contactar amb nosaltres a través del correu
-      indicat.</p>
-
-    <h2>2. Quines dades recollim</h2>
-
-    <h3>2.1. Dades que ens proporciones directament</h3>
-    <ul>
-      <li><strong>Dades de registre:</strong> adreça de correu
-        electrònic, nom i cognoms, i nom d'usuari (nickname) quan crees
-        un compte.</li>
-      <li><strong>Foto de perfil:</strong> si decideixes afegir-ne una.</li>
-      <li><strong>Contingut que generes:</strong> ressenyes, valoracions
-        (estrelles) i comentaris que publiques sobre els mercats.</li>
-      <li><strong>Sol·licituds d'organitzador:</strong> si sol·licites
-        gestionar un mercat, recollim el teu telèfon i la informació que
-        proporciones a la sol·licitud.</li>
-      <li><strong>Preferències de zona:</strong> les províncies
- sobre les quals vols rebre avisos de mercats nous, que
- selecciones en registrar-te o des del teu perfil.</li>
-    </ul>
-
-    <h3>2.2. Dades que es recullen automàticament</h3>
-    <ul>
-      <li><strong>Ubicació:</strong> amb el teu permís, fem servir la
-        ubicació del teu dispositiu per mostrar-te els mercats més
-        propers i ordenar-los per proximitat. Pots desactivar aquest
-        permís en qualsevol moment des dels ajustos del teu dispositiu.</li>
-      <li><strong>Identificador de notificacions (token):</strong> un
-        identificador tècnic del dispositiu necessari per enviar-te
-        notificacions push.</li>
-      <li><strong>Informació de suport:</strong> quan ens
- envies un missatge de suport o incidència, recollim de manera
- automàtica dades tècniques del teu dispositiu (model, versió
- del sistema operatiu i versió de l'aplicació) per poder
- diagnosticar i resoldre el problema que ens reportes.</li>
-    </ul>
-
-    <h3>2.3. Autenticació amb Google</h3>
-    <p>Si inicies sessió amb Google, rebem la informació bàsica del teu
-      compte de Google (correu i nom) necessària per crear el teu perfil.</p>
-
-    <h2>3. Amb quina finalitat fem servir les teves dades</h2>
-    <ul>
-      <li>Crear i gestionar el teu compte d'usuari.</li>
-      <li>Mostrar-te els mercats i permetre't guardar-los com a preferits.</li>
-      <li>Mostrar-te els mercats més propers segons la teva ubicació.</li>
-      <li>Permetre't publicar ressenyes i valoracions.</li>
-      <li>Enviar-te notificacions sobre canvis, recordatoris o novetats
-        dels mercats que t'interessen.</li>
-      <li>Gestionar les sol·licituds per convertir-se en organitzador.</li>
-      <li>Millorar i mantenir el funcionament de l'aplicació.</li>
-      <li>Enviar-te avisos de mercats nous a les províncies que has triat.</li>
-      <li>Atendre i resoldre les teves consultes o incidències de suport.</li>
+      <li><strong>Compte:</strong> correu electrònic, nom, cognom, nom
+        d'usuari (opcional) i, si vols, foto de perfil. Si entres amb
+        Google, rebem el correu, el nom i la foto del teu compte de Google.</li>
+      <li><strong>Preferències:</strong> les províncies de les quals vols
+        rebre avisos i si vols rebre el «Resum del cap de setmana» o, si
+        ets organitzador/a, els recordatoris per revisar els teus mercats.</li>
+      <li><strong>Activitat a l'app:</strong> els mercats que tens a
+        preferits i els que has marcat amb «Hi vaig».</li>
+      <li><strong>Ressenyes:</strong> la puntuació i el comentari que
+        publiques sobre un mercat.</li>
+      <li><strong>Sol·licitud d'organitzador/a:</strong> nom, correu,
+        telèfon, els mercats que gestiones i l'explicació que ens dones.</li>
+      <li><strong>Dades dels mercats (organitzadors):</strong> la
+        informació del mercat que publiques, incloent-hi, si l'hi poses,
+        un telèfon o correu de contacte i un enllaç web o d'Instagram.</li>
+      <li><strong>Missatges de suport:</strong> el text que ens envies
+        des de l'app, juntament amb el teu nom, correu i identificador
+        d'usuari, i dades tècniques del dispositiu (model, sistema operatiu
+        i versió de l'app) per poder resoldre el problema.</li>
     </ul>
 
-    <h2>4. Base legal del tractament</h2>
-    <p>Tractem les teves dades sobre la base de:</p>
+    <h3>2.2. Dades que es generen en fer servir l'app</h3>
     <ul>
-      <li><strong>El teu consentiment</strong>, que atorgues en
-        registrar-te i en acceptar els permisos (com la ubicació o les
-        notificacions).</li>
-      <li><strong>L'execució del servei</strong> que t'oferim a través
-        de l'aplicació.</li>
+      <li><strong>Ubicació:</strong> només si hi dones permís, fem servir
+        la ubicació del dispositiu per calcular la distància als mercats i
+        ordenar-los per proximitat. Aquest càlcul es fa al teu dispositiu:
+        <strong>no guardem la teva ubicació als nostres servidors</strong>.
+        Pots retirar el permís quan vulguis des dels ajustos del dispositiu.</li>
+      <li><strong>Identificador de notificacions:</strong> un codi tècnic
+        de cada dispositiu (o navegador) on tens la sessió iniciada,
+        necessari per enviar-te notificacions.</li>
+      <li><strong>Dades d'ús de l'app per a Android:</strong> fem servir
+        Google Analytics per a Firebase per saber, de manera agregada,
+        quantes persones fan servir l'app, en quins dispositius i quines
+        pantalles es visiten més. Fa servir un identificador de
+        l'aplicació (no el teu nom ni el teu correu). No es fa servir
+        per a publicitat.</li>
+      <li><strong>Plataforma i últim accés:</strong> quan obres MàrCAT
+        amb la sessió iniciada, guardem al teu compte des de quin tipus de
+        dispositiu hi has entrat (app per a Android, web a l'iPhone, web a
+        Android o ordinador) i la data de l'últim accés a cadascun, i sumem
+        1 a un comptador diari per plataforma. Es fa com a molt un cop al
+        dia, <strong>sense galetes</strong>, i només ho fem servir per saber
+        quanta gent fa servir cada versió de l'app (per exemple, per decidir
+        si fem una app per a iPhone).</li>
+      <li><strong>Estadístiques dels mercats:</strong> comptem quantes
+        vegades s'obre la fitxa de cada mercat i quantes vegades es toquen
+        els botons («Com arribar-hi», compartir, contactar, web,
+        calendari). Són <strong>comptadors totals per mes</strong>: no es
+        guarda qui ho ha fet.</li>
     </ul>
-    <p>Pots retirar el teu consentiment en qualsevol moment, tal com
-      s'explica a l'apartat de drets.</p>
 
-    <h2>5. Amb qui compartim les teves dades</h2>
-    <p>MàrCAT <strong>no ven</strong> les teves dades personals a tercers.</p>
-    <p>Fem servir serveis de tercers de confiança que actuen com a
-      proveïdors tecnològics per fer funcionar l'aplicació:</p>
+    <h2 id="publiques">3. Què veuen els altres usuaris</h2>
     <ul>
-      <li><strong>Google Firebase</strong> (Google LLC): allotgem la base
-        de dades, l'autenticació, l'emmagatzematge de fotos i les
-        notificacions a la infraestructura de Firebase.</li>
-      <li><strong>Google Maps / Places:</strong> per mostrar mapes i
-        calcular rutes.</li>
+      <li><strong>Ressenyes:</strong> es mostren amb el teu nom (o nom
+        d'usuari) i la teva foto de perfil, si en tens. Per evitar abusos,
+        als comentaris no es poden posar telèfons, correus ni enllaços.</li>
+      <li><strong>«Hi vaig» i preferits:</strong> als altres usuaris només
+        se'ls mostra el nombre total de persones, mai qui són.</li>
+      <li><strong>Organitzadors:</strong> la fitxa del mercat és pública,
+        incloent-hi el telèfon o correu de contacte si l'organitzador/a
+        l'hi ha posat. Si et contacten per WhatsApp o per correu, aquesta
+        conversa queda fora de MàrCAT.</li>
+      <li>El teu correu electrònic, les teves preferències i el teu
+        telèfon de sol·licitud <strong>no es mostren mai</strong> a altres
+        usuaris.</li>
     </ul>
-    <p>Aquests proveïdors només tracten les dades en nom nostre i per a
-      les finalitats descrites.</p>
 
-    <h2>6. On s'emmagatzemen les teves dades</h2>
-    <p>Les dades s'emmagatzemen als servidors de Google Firebase. Google
-      pot tractar dades en servidors ubicats dins i fora de l'Espai
-      Econòmic Europeu, sempre amb les garanties adequades que exigeix la
-      normativa europea de protecció de dades (RGPD).</p>
+    <h2 id="finalitats">4. Per a què i amb quina base legal</h2>
+    <table>
+      <thead>
+        <tr><th>Finalitat</th><th>Base legal (RGPD)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Crear i gestionar el teu compte, guardar preferits, «Hi vaig»
+          i ressenyes, i que els organitzadors gestionin els seus mercats</td>
+          <td>Execució del servei que demanes (art. 6.1.b)</td></tr>
+        <tr><td>Mostrar-te els mercats més propers</td>
+          <td>Consentiment (permís d'ubicació) (art. 6.1.a)</td></tr>
+        <tr><td>Enviar-te notificacions (canvis dels teus preferits,
+          recordatoris, mercats nous, resum del cap de setmana)</td>
+          <td>Consentiment (permís de notificacions) (art. 6.1.a)</td></tr>
+        <tr><td>Revisar les sol·licituds d'organitzador/a i verificar mercats</td>
+          <td>Mesures a petició teva (art. 6.1.b)</td></tr>
+        <tr><td>Atendre missatges de suport</td>
+          <td>Interès legítim a resoldre incidències (art. 6.1.f)</td></tr>
+        <tr><td>Saber quanta gent fa servir cada versió de l'app (plataforma
+          i últim accés) i estadístiques agregades d'ús i dels mercats, per
+          millorar l'app</td>
+          <td>Interès legítim a millorar el servei (art. 6.1.f)</td></tr>
+        <tr><td>Moderar contingut i prevenir abusos</td>
+          <td>Interès legítim i compliment dels Termes (art. 6.1.f)</td></tr>
+      </tbody>
+    </table>
+    <p>No fem servir les teves dades per a publicitat ni per crear perfils
+      comercials, i <strong>no les venem a ningú</strong>.</p>
 
-    <h2>7. Durant quant de temps conservem les dades</h2>
-    <p>Conservem les teves dades mentre mantinguis el teu compte actiu.
-      Si elimines el teu compte, les teves dades personals s'eliminaran,
-      tret d'aquelles que hàgim de conservar per obligacions legals.</p>
-    <p>El contingut públic que hagis generat (com les ressenyes) es pot
-      eliminar quan elimines el teu compte.</p>
-
-    <h2>8. Els teus drets</h2>
-    <p>D'acord amb el Reglament General de Protecció de Dades (RGPD), tens
-      dret a:</p>
+    <h2 id="avisos">5. Notificacions i avisos</h2>
+    <p>Segons el que facis servir, et podem enviar:</p>
     <ul>
-      <li><strong>Accedir</strong> a les teves dades personals.</li>
-      <li><strong>Rectificar</strong> les dades inexactes.</li>
-      <li><strong>Suprimir</strong> les teves dades ("dret a l'oblit").</li>
-      <li><strong>Oposar-te</strong> al tractament o <strong>limitar-lo</strong>.</li>
-      <li><strong>Portabilitat</strong> de les teves dades.</li>
-      <li><strong>Retirar el consentiment</strong> en qualsevol moment.</li>
+      <li>Canvis d'un mercat que tens a preferits (horari, adreça,
+        vacances, cancel·lacions, ajornaments, quan es desvela un mercat
+        «Pròximament»...) i un recordatori dos dies abans.</li>
+      <li>Mercats nous a les províncies que has triat.</li>
+      <li>El «Resum del cap de setmana», els dissabtes.</li>
+      <li>Si ets organitzador/a: avisos sobre els teus mercats i
+        recordatoris els dilluns i dimecres per revisar-los.</li>
     </ul>
-    <p>Per exercir aquests drets, pots:</p>
+    <p>Pots desactivar el resum i els recordatoris des del teu
+      <strong>Perfil</strong>, canviar les províncies que t'interessen o
+      desactivar totes les notificacions des dels ajustos del dispositiu
+      o del navegador.</p>
+
+    <h2 id="proveidors">6. Amb qui les compartim</h2>
+    <p>Només amb proveïdors que necessitem perquè MàrCAT funcioni, que
+      tracten les dades en nom nostre i per a aquestes finalitats:</p>
     <ul>
-      <li>Editar o eliminar la teva informació directament des de
-        l'aplicació, incloent-hi l'eliminació del teu compte.</li>
-      <li>Contactar amb nosaltres a
-        <strong>marcatapp.26@gmail.com</strong>.</li>
+      <li><strong>Google (Firebase):</strong> base de dades, inici de sessió,
+        emmagatzematge de fotos, funcions del servidor, notificacions,
+        allotjament de la versió web i Google Analytics per a Firebase.</li>
+      <li><strong>Google (Gmail):</strong> recepció dels missatges de suport
+        i de les sol·licituds.</li>
+      <li><strong>OpenStreetMap (servei Nominatim):</strong> quan un
+        organitzador/a escriu l'adreça d'un mercat, s'hi envia aquesta
+        adreça per trobar-ne les coordenades.</li>
+      <li><strong>GitHub:</strong> allotjament d'aquesta pàgina web
+        (marcat.app).</li>
     </ul>
-    <p>També tens dret a presentar una reclamació davant l'Agència
-      Espanyola de Protecció de Dades (AEPD) si consideres que el
-      tractament de les teves dades no és conforme a la normativa.</p>
+    <p>Quan toques «Com arribar-hi», «Afegir al calendari», el botó de
+      WhatsApp o un enllaç extern, s'obre una altra aplicació o web (Google
+      Maps, el teu calendari, WhatsApp...), que té la seva pròpia política
+      de privacitat.</p>
+    <p>També podem haver de comunicar dades a les autoritats quan ho
+      exigeixi la llei.</p>
 
-    <h2>9. Seguretat</h2>
-    <p>Apliquem mesures tècniques i organitzatives raonables per protegir
-      les teves dades. Tot i això, cap sistema és completament segur, per
-      la qual cosa no podem garantir una seguretat absoluta.</p>
+    <h2 id="transferencies">7. On s'emmagatzemen</h2>
+    <p>Les dades es guarden als servidors de Google Firebase. Google i
+      GitHub poden tractar dades fora de l'Espai Econòmic Europeu (per
+      exemple, als Estats Units). En aquests casos, les transferències es
+      fan amb les garanties del RGPD: el Marc de Privacitat de Dades
+      UE-EUA (Data Privacy Framework) i les clàusules contractuals tipus
+      aprovades per la Comissió Europea.</p>
 
-    <h2>10. Menors d'edat</h2>
-    <p>MàrCAT no està dirigida a menors d'edat. En registrar-te,
- declares que ets major de 18 anys. Si detectem que hem recollit
- dades d'un menor sense el consentiment adient dels seus pares o
- tutors legals, les eliminarem tan aviat com en tinguem
- coneixement. Si ets pare, mare o tutor legal i creus que un menor
- ens ha facilitat dades, pots contactar amb nosaltres a
- marcatapp.26@gmail.com.</p>
+    <h2 id="conservacio">8. Quant de temps les guardem</h2>
+    <ul>
+      <li><strong>Compte, preferits, ressenyes i preferències:</strong>
+        mentre tinguis el compte. Si l'elimines, s'esborren
+        (<a href="eliminar-compte.html">com eliminar el compte</a>).</li>
+      <li><strong>Identificadors de notificacions:</strong> mentre tinguis
+        la sessió iniciada al dispositiu; els que deixen de funcionar
+        s'esborren automàticament.</li>
+      <li><strong>Sol·licituds d'organitzador/a i missatges de suport:</strong>
+        el temps necessari per gestionar-los i, com a màxim, dos anys.</li>
+      <li><strong>Plataforma i últim accés:</strong> mentre tinguis el
+        compte (només es guarda l'últim accés de cada plataforma). Els
+        comptadors diaris no contenen dades personals.</li>
+      <li><strong>Dades de Google Analytics:</strong> segons la configuració
+        del servei, com a màxim 14 mesos.</li>
+      <li><strong>Estadístiques dels mercats:</strong> no contenen dades
+        personals.</li>
+    </ul>
+    <p>Podem conservar alguna dada més temps si ho exigeix la llei o per
+      defensar-nos d'una reclamació.</p>
 
-    <h2>11. Canvis en aquesta política</h2>
-    <p>Podem actualitzar aquesta Política de Privacitat en qualsevol
-      moment. Publicarem la versió actualitzada amb la data corresponent.
-      Et recomanem revisar-la periòdicament.</p>
+    <h2 id="galetes">9. Galetes i emmagatzematge local</h2>
+    <ul>
+      <li><strong>marcat.app (aquesta web):</strong> no fa servir galetes
+        ni eines d'analítica.</li>
+      <li><strong>app.marcat.app (versió web de l'app):</strong> fa servir
+        l'emmagatzematge local del navegador per mantenir la sessió
+        iniciada, guardar una còpia dels mercats perquè carregui més
+        ràpid i recordar l'última pestanya oberta. És estrictament
+        necessari perquè l'app funcioni. No fa servir galetes de
+        publicitat ni d'analítica.</li>
+    </ul>
 
-    <h2>12. Contacte</h2>
-    <p>Si tens qualsevol dubte sobre aquesta Política de Privacitat o
-      sobre com tractem les teves dades, pots contactar amb nosaltres a:</p>
-    <p><strong>Correu:</strong> marcatapp.26@gmail.com</p>
-  </div>
+    <h2 id="drets">10. Els teus drets</h2>
+    <p>Pots exercir en qualsevol moment els drets d'<strong>accés,
+      rectificació, supressió, oposició, limitació del tractament i
+      portabilitat</strong>, i retirar el consentiment que hagis donat:</p>
+    <ul>
+      <li>Directament a l'app: editar el perfil, canviar preferències,
+        esborrar ressenyes o <a href="eliminar-compte.html">eliminar el
+        compte</a>.</li>
+      <li>Escrivint a <a href="mailto:marcatapp.26@gmail.com">marcatapp.26@gmail.com</a>
+        des del correu del teu compte.</li>
+    </ul>
+    <p>Si creus que no hem tractat bé les teves dades, pots presentar una
+      reclamació a l'<a href="https://www.aepd.es" target="_blank" rel="noopener">Agència
+      Espanyola de Protecció de Dades</a>.</p>
 
-  <footer class="footer">
-    <p>© 2026 MàrCAT ·
-      <a href="index.html">Inici</a> ·
-      <a href="termes.html">Termes i Condicions</a>
-    </p>
-    <p style="margin-top:8px;">Contacte: marcatapp.26@gmail.com</p>
+    <h2 id="seguretat">11. Seguretat</h2>
+    <p>Les comunicacions van xifrades i l'accés a les dades està limitat
+      per regles que només deixen a cada persona veure i modificar el que
+      li correspon. Cap sistema és totalment segur, però hi posem les
+      mesures raonables per protegir la teva informació.</p>
+
+    <h2 id="menors">12. Menors d'edat</h2>
+    <p>MàrCAT està pensada per a persones majors de 18 anys. Si creus que
+      un menor ens ha donat dades, escriu-nos i les esborrarem.</p>
+
+    <h2 id="canvis">13. Canvis en aquesta política</h2>
+    <p>Quan l'actualitzem, canviarem la data de dalt de tot. Si el canvi
+      és important, també t'ho explicarem a l'app.</p>
+
+    <div class="nota">
+      Dubtes? Escriu-nos a
+      <a href="mailto:marcatapp.26@gmail.com">marcatapp.26@gmail.com</a>
+      i et respondrem tan aviat com puguem.
+    </div>
+
+  </main>
+
+  <footer class="peu">
+    <div class="contenidor">
+      <div>
+        <a class="marca" href="./">
+          <img src="assets/img/logo-128.png" alt="" width="36" height="36">
+          MàrCAT
+        </a>
+        <p class="lema">Els mercats de segona mà de Catalunya, a la butxaca.</p>
+        <div class="xarxes">
+          <a href="https://www.instagram.com/marcat.app/" target="_blank" rel="noopener">Instagram · @marcat.app</a>
+        </div>
+      </div>
+      <div>
+        <h4>L'app</h4>
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=com.mercat.mercat&amp;referrer=utm_source%3Dweb" target="_blank" rel="noopener">Google Play</a></li>
+          <li><a href="https://app.marcat.app" target="_blank" rel="noopener">App web (iPhone i ordinador)</a></li>
+          <li><a href="./#organitzadors">Per a organitzadors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informació</h4>
+        <ul>
+          <li><a href="privacitat.html">Política de privacitat</a></li>
+          <li><a href="termes.html">Termes i condicions</a></li>
+          <li><a href="eliminar-compte.html">Eliminar el compte</a></li>
+          <li><a href="mailto:marcatapp.26@gmail.com">marcatapp.26@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="copy">© <span data-any>2026</span> MàrCAT · Fet amb ♥ a Catalunya</p>
+    </div>
   </footer>
 
+  <script src="assets/js/web.js"></script>
 </body>
 </html>

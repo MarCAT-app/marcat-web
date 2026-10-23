@@ -1,131 +1,421 @@
 <!DOCTYPE html>
-<html lang="ca">
+<html lang="ca" class="sense-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MàrCAT — Mercats de segona mà i brocanters de Catalunya</title>
-  <link rel="icon" href="https://marcat.app/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="96x96" href="https://marcat.app/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="48x48" href="https://marcat.app/favicon-48x48.png">
-  <link rel="apple-touch-icon" href="https://marcat.app/apple-touch-icon.png">
+  <title>MàrCAT · Els mercats de segona mà de Catalunya</title>
   <meta name="description"
-    content="MàrCAT és l'aplicació per descobrir mercats de segona mà,
-    brocanters i artesania a Catalunya.">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Botons de descàrrega: un al costat de l'altre (i un sota l'altre
-       en mòbil). Reutilitzen la classe .badge de style.css. */
-    .botons-descarrega {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 8px;
-    }
-    .botons-descarrega a.badge {
-      color: #ffffff;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    /* Botó de la versió web (iPhone): mateixa forma, en verd. */
-    .botons-descarrega a.badge.web {
-      background: #2E7D32;
-      border-color: #2E7D32;
-    }
-    .nota-iphone {
-      margin-top: 14px;
-      font-size: 0.9em;
-      opacity: 0.85;
-    }
-  </style>
+    content="MàrCAT és l'app gratuïta per descobrir mercats de segona mà, brocanters, antiguitats i artesania a tot Catalunya. Desa els teus preferits i rep avisos de cada canvi.">
+  <meta name="theme-color" content="#2D4A3E">
+
+  <!-- Vista prèvia en compartir l'enllaç (WhatsApp, xarxes...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://marcat.app/">
+  <meta property="og:title" content="MàrCAT · Els mercats de segona mà de Catalunya">
+  <meta property="og:description"
+    content="Troba brocanters, mercats d'antiguitats, vintage i artesania a prop teu. Gratuïta.">
+  <meta property="og:image" content="https://marcat.app/assets/img/og-marcat.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:locale" content="ca_ES">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48x48.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/fraunces-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/web.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">MàrCAT</a>
-    <nav>
-      <a href="index.html">Inici</a>
-      <a href="privacitat.html">Privacitat</a>
-      <a href="termes.html">Condicions</a>
-    </nav>
+  <!-- ============================ CAPÇALERA ============================ -->
+  <header class="capcalera">
+    <div class="contenidor">
+      <a class="marca" href="./" aria-label="MàrCAT, inici">
+        <img src="assets/img/logo-128.png" alt="" width="36" height="36">
+        MàrCAT
+      </a>
+      <nav class="menu" aria-label="Menú principal">
+        <a href="#com-funciona">Com funciona</a>
+        <a href="#funcions">Funcions</a>
+        <a href="#organitzadors">Organitzadors</a>
+        <a class="boto-petit" href="#descarrega">Descarrega</a>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <h1>MàrCAT</h1>
-    <p class="subtitol">
-      Descobreix els mercats de segona mà, brocanters i artesania
-      de tot Catalunya. Troba'ls, guarda'ls i no et perdis cap edició.
-    </p>
+  <main>
 
-    <div class="botons-descarrega">
-      <a class="badge"
-        href="https://play.google.com/store/apps/details?id=com.mercat.mercat&pcampaignid=web_share"
-        target="_blank" rel="noopener noreferrer">
-        Descarrega-la a Google Play
-      </a>
-      <a class="badge web"
-        href="https://app.marcat.app"
-        target="_blank" rel="noopener noreferrer">
-        Versió web per a iPhone
-      </a>
+    <!-- =============================== HERO =============================== -->
+    <section class="hero" id="descarrega">
+      <div class="contenidor">
+
+        <div>
+          <span class="etiqueta"><span class="punt">✓</span> Gratuïta · Feta a Catalunya</span>
+
+          <h1>
+            Els mercats de segona mà de Catalunya,
+            <em>a la butxaca<svg viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 14 C 60 4, 140 4, 200 10 S 280 16, 297 6"/></svg></em>
+          </h1>
+
+          <p class="entradeta">
+            Brocanters, antiguitats, roba vintage, llibres i artesania.
+            Troba'ls a prop teu, desa els teus preferits i no et perdis
+            cap edició.
+          </p>
+
+          <div class="descarregues" data-descarregues>
+            <a class="boto brilla" data-boto="play"
+              href="https://play.google.com/store/apps/details?id=com.mercat.mercat&amp;referrer=utm_source%3Dweb"
+              target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7.5v7m0 0-3-3m3 3 3-3"/><path d="M10.5 18.5h3"/></svg>
+              <span class="boto-text"><small>Per a Android</small>Descarrega-la a Google Play</span>
+            </a>
+            <a class="boto secundari" data-boto="web" href="https://app.marcat.app" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5S14.6 18.7 12 21.5C9.4 18.7 8.1 15.5 8.1 12S9.4 5.3 12 2.5Z"/></svg>
+              <span class="boto-text"><small>Per a iPhone i ordinador</small>Obre l'app web</span>
+            </a>
+          </div>
+
+          <!-- Només a iPhone (ho activa web.js) -->
+          <div class="passos-iphone">
+            <strong>A l'iPhone, tindràs MàrCAT com una app més:</strong>
+            <ol>
+              <li>Obre <strong>l'app web</strong> amb Safari.</li>
+              <li>Toca <strong>Compartir</strong> (el quadrat amb la fletxa).</li>
+              <li>Tria <strong>Afegeix a la pantalla d'inici</strong>.</li>
+            </ol>
+          </div>
+
+          <!-- Només a l'ordinador (ho activa web.js) -->
+          <div class="qr">
+            <img src="assets/img/qr-play.svg" alt="Codi QR per descarregar MàrCAT a Google Play" width="84" height="84">
+            <span>Tens Android? <strong>Escaneja el codi</strong><br>amb el mòbil i descarrega-la.</span>
+          </div>
+
+          <div class="xifres">
+            <div class="xifra"><strong>4</strong><span>províncies</span></div>
+            <div class="xifra"><strong>+20</strong><span>organitzadors verificats</span></div>
+            <div class="xifra"><strong>100%</strong><span>gratuïta</span></div>
+          </div>
+        </div>
+
+        <!-- Mòbil de mostra (il·lustració feta amb CSS) -->
+        <div class="escena" aria-hidden="true">
+          <div class="mobil">
+            <div class="pantalla">
+              <div class="illa"></div>
+              <div class="app-barra">Mercats</div>
+              <div class="app-filtres">
+                <span class="actiu">Dissabte</span>
+                <span>Barcelona</span>
+                <span>Antiguitats</span>
+                <span>Roba</span>
+              </div>
+              <div class="app-llista">
+                <div class="targeta-app">
+                  <div class="verificat">✓ Verificat per l'organitzador/a</div>
+                  <div class="foto f1"><span class="data">Dissabte · 9:00</span></div>
+                  <div class="cos"><h4>Mercat Vintage del Poble</h4><p>★ 4,8 · Sant Cugat · 1,2 km</p></div>
+                </div>
+                <div class="targeta-app">
+                  <div class="foto f2"><span class="data">Diumenge · 8:00</span></div>
+                  <div class="cos"><h4>Brocanter de la Plaça</h4><p>★ 4,6 · Girona · 3,4 km</p></div>
+                </div>
+                <div class="targeta-app">
+                  <div class="verificat">✓ Verificat per l'organitzador/a</div>
+                  <div class="foto f3"><span class="data">Dissabte · 10:00</span></div>
+                  <div class="cos"><h4>Fira d'Artesania i Llibres</h4><p>★ 4,9 · Vic · 5,0 km</p></div>
+                </div>
+                <div class="targeta-app">
+                  <div class="foto f4"><span class="data">Diumenge · 9:30</span></div>
+                  <div class="cos"><h4>Mercat de Segona Mà</h4><p>★ 4,5 · Reus · 7,1 km</p></div>
+                </div>
+              </div>
+              <div class="app-nav">
+                <span class="actiu">Explorar</span><span>Preferits</span><span>Cercar</span><span>Perfil</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="avis a1">
+            <span class="ico">🔔</span>
+            <span><b>Canvi d'horari</b>«Brocanter de la Plaça» ara obre a les 9:00</span>
+          </div>
+          <div class="avis a2">
+            <span class="ico">❤️</span>
+            <span><b>D'aquí a 2 dies</b>Tens aquest mercat als preferits</span>
+          </div>
+          <div class="avis a3">
+            <span class="ico">🌤️</span>
+            <span><b>Resum del cap de setmana</b>8 mercats a les teves zones</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================= CINTA CATEGORIES ========================= -->
+    <div class="cinta" aria-hidden="true">
+      <div class="pista">
+        <span>Roba vintage</span><span>Antiguitats</span><span>Llibres</span><span>Vinils</span>
+        <span>Mobles</span><span>Artesania</span><span>Brocanters</span><span>Col·leccionisme</span>
+        <span>Productes de pagès</span><span>Joguines antigues</span>
+        <span>Roba vintage</span><span>Antiguitats</span><span>Llibres</span><span>Vinils</span>
+        <span>Mobles</span><span>Artesania</span><span>Brocanters</span><span>Col·leccionisme</span>
+        <span>Productes de pagès</span><span>Joguines antigues</span>
+      </div>
     </div>
 
-    <p class="nota-iphone">
-      Tens iPhone? Obre la versió web amb Safari, toca
-      <strong>Compartir</strong> i després
-      <strong>Afegeix a la pantalla d'inici</strong>.
-      La tindràs com una app més.
-    </p>
-  </section>
+    <!-- =========================== COM FUNCIONA =========================== -->
+    <section class="seccio" id="com-funciona">
+      <div class="contenidor">
+        <div class="capcal-seccio apareix">
+          <span class="avantitol">Com funciona</span>
+          <h2>Del sofà al mercat, en <em>tres passos</em></h2>
+          <p>Sense buscar per grups de WhatsApp ni cartells de fa tres mesos.</p>
+        </div>
 
-  <div class="container">
-    <div class="features">
-      <div class="feature-card">
-        <div class="icon">🗺️</div>
-        <h3>Explora</h3>
-        <p>Mercats de les quatre províncies catalanes, amb mapa i
-          rutes per arribar-hi fàcilment.</p>
+        <div class="passos">
+          <article class="pas apareix">
+            <div class="ico-gran">🔍</div>
+            <h3>Descobreix</h3>
+            <p>Ordena per proximitat, per data o per valoració, i filtra per
+              dia, província o categoria.</p>
+          </article>
+          <article class="pas apareix" style="--retard:.12s">
+            <div class="ico-gran">❤️</div>
+            <h3>Desa</h3>
+            <p>Afegeix els que t'agraden a preferits i t'avisarem dos dies
+              abans de cada edició.</p>
+          </article>
+          <article class="pas apareix" style="--retard:.24s">
+            <div class="ico-gran">🚶</div>
+            <h3>Ves-hi</h3>
+            <p>«Com arribar-hi» en un toc, afegeix-lo al calendari i
+              digues que hi vas.</p>
+          </article>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="icon">❤️</div>
-        <h3>Guarda els teus preferits</h3>
-        <p>Marca els mercats que t'interessen i rep recordatoris
-          abans de cada edició.</p>
+    </section>
+
+    <!-- ============================= FUNCIONS ============================= -->
+    <section class="seccio" id="funcions" style="padding-top:0">
+      <div class="contenidor">
+        <div class="capcal-seccio apareix">
+          <span class="avantitol">Funcions</span>
+          <h2>Tot el que cal per <em>no fer el viatge en va</em></h2>
+          <p>La informació dels mercats canvia: per pluja, per vacances, per
+            festius. MàrCAT t'ho explica abans que surtis de casa.</p>
+        </div>
+
+        <div class="bento">
+          <article class="caixa ampla verda apareix">
+            <div class="ico">🔔</div>
+            <h3>Avisos quan canvia alguna cosa</h3>
+            <p>Canvis d'horari o d'adreça, edicions cancel·lades o
+              ajornades, vacances... Si el tens a preferits, ho sabràs al moment.</p>
+            <div class="mini-notif">
+              <div><b>Edició ajornada</b>«Mercat Vintage del Poble» passa al dissabte 15</div>
+              <div><b>Nou mercat a Girona!</b>S'ha afegit «Brocanter de la Plaça»</div>
+            </div>
+          </article>
+
+          <article class="caixa ampla apareix" style="--retard:.1s">
+            <div class="ico">✅</div>
+            <h3>Informació verificada</h3>
+            <p>Els mercats que gestiona el seu organitzador/a porten el segell
+              i et diuen quan es van actualitzar per última vegada. Els altres,
+              t'avisen que confirmis abans d'anar-hi.</p>
+            <span class="segell">✓ Verificat · Actualitzada avui</span>
+          </article>
+
+          <article class="caixa apareix">
+            <div class="ico">🌤️</div>
+            <h3>Resum del cap de setmana</h3>
+            <p>Dissabte al matí, els mercats del cap de setmana a les teves zones.</p>
+          </article>
+
+          <article class="caixa terracota apareix" style="--retard:.1s">
+            <div class="ico">🎁</div>
+            <h3>Pròximament</h3>
+            <p>Hi ha mercats que s'anuncien abans de desvelar la data i el lloc.
+              Desa'ls i seràs dels primers a saber-ho.</p>
+          </article>
+
+          <article class="caixa apareix" style="--retard:.2s">
+            <div class="ico">⭐</div>
+            <h3>Ressenyes</h3>
+            <p>Valora els mercats que visites i llegeix l'experiència d'altres.</p>
+          </article>
+
+          <article class="caixa ampla apareix">
+            <div class="ico">💬</div>
+            <h3>Parla amb l'organitzador/a</h3>
+            <p>Tens un dubte? Escriu-li per WhatsApp o per correu des de la
+              mateixa fitxa del mercat.</p>
+          </article>
+
+          <article class="caixa ampla apareix" style="--retard:.1s">
+            <div class="ico">💻</div>
+            <h3>També a l'iPhone i a l'ordinador</h3>
+            <p>Entra a <a href="https://app.marcat.app" target="_blank" rel="noopener">app.marcat.app</a>
+              i tindràs el mateix, sense instal·lar res.</p>
+          </article>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="icon">⭐</div>
-        <h3>Ressenyes</h3>
-        <p>Valora els mercats i descobreix l'opinió d'altres
-          visitants.</p>
+    </section>
+
+    <!-- =========================== ORGANITZADORS =========================== -->
+    <section class="seccio organitzadors" id="organitzadors">
+      <div class="contenidor">
+        <div class="capcal-seccio apareix">
+          <span class="avantitol">Per a organitzadors</span>
+          <h2>El teu mercat, <em>ben a la vista</em></h2>
+          <p>Publicar-lo és gratuït. Tu mantens la informació al dia i la gent
+            que el segueix s'assabenta de tot al moment.</p>
+        </div>
+
+        <div class="org-graella">
+          <div class="org-item apareix">
+            <div class="ico">📝</div>
+            <h3>Fitxa completa</h3>
+            <p>Foto, horaris per dia, web o Instagram i contacte directe.</p>
+          </div>
+          <div class="org-item apareix" style="--retard:.08s">
+            <div class="ico">🏖️</div>
+            <h3>Vacances, ajornaments i cancel·lacions</h3>
+            <p>Un toc i avisem tothom qui el té a preferits.</p>
+          </div>
+          <div class="org-item apareix" style="--retard:.16s">
+            <div class="ico">📊</div>
+            <h3>Estadístiques</h3>
+            <p>Seguidors, assistents i valoracions del teu mercat.</p>
+          </div>
+          <div class="org-item apareix">
+            <div class="ico">🎁</div>
+            <h3>Mode Pròximament</h3>
+            <p>Anuncia'l abans de donar la data i fes créixer l'expectació.</p>
+          </div>
+          <div class="org-item apareix" style="--retard:.08s">
+            <div class="ico">✅</div>
+            <h3>Segell de verificat</h3>
+            <p>Els visitants saben que la informació ve directament de tu.</p>
+          </div>
+          <div class="org-item apareix" style="--retard:.16s">
+            <div class="ico">🔄</div>
+            <h3>Molts mercats? Parlem-ne</h3>
+            <p>Si ja tens el calendari a la teva web, podem estudiar connectar-lo.</p>
+          </div>
+        </div>
+
+        <div class="org-cta apareix">
+          <a class="boto terracota"
+            href="mailto:marcatapp.26@gmail.com?subject=Vull%20publicar%20el%20meu%20mercat%20a%20M%C3%A0rCAT">
+            Vull publicar el meu mercat
+          </a>
+          <p>o des de l'app: <strong>Perfil → «Sóc organitzador/a»</strong>.<br>
+            Ja hi ha més de 20 organitzadors verificats.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="icon">🔔</div>
-        <h3>Notificacions</h3>
-        <p>Assabenta't de canvis d'horari, cancel·lacions o nous
-          mercats a prop teu.</p>
+    </section>
+
+    <!-- =============================== VALORS =============================== -->
+    <section class="seccio" id="valors">
+      <div class="contenidor">
+        <div class="capcal-seccio centrat apareix">
+          <span class="avantitol">El que ens mou</span>
+          <h2>Segona mà, <em>primera opció</em></h2>
+          <p>Creiem que el que ja existeix mereix una segona vida, i que els
+            mercats fan poble.</p>
+        </div>
+
+        <div class="valors">
+          <div class="valor apareix">
+            <div class="cercle">♻️</div>
+            <h3>Sostenibilitat</h3>
+            <p>Reutilitzar és la manera més senzilla de consumir menys.</p>
+          </div>
+          <div class="valor apareix" style="--retard:.08s">
+            <div class="cercle">🏘️</div>
+            <h3>Proximitat</h3>
+            <p>Paradistes, artesans i organitzadors del territori.</p>
+          </div>
+          <div class="valor apareix" style="--retard:.16s">
+            <div class="cercle">🤝</div>
+            <h3>Comunitat</h3>
+            <p>Ressenyes reals i organitzadors que parlen directament amb tu.</p>
+          </div>
+          <div class="valor apareix" style="--retard:.24s">
+            <div class="cercle">🗣️</div>
+            <h3>En català</h3>
+            <p>Pensada i feta a Catalunya. També disponible en castellà.</p>
+          </div>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="icon">✅</div>
-        <h3>Informació verificada</h3>
-        <p>Dades confirmades pels mateixos organitzadors i contacte
-          directe per WhatsApp per resoldre qualsevol dubte.</p>
+    </section>
+
+    <!-- ============================ CRIDA FINAL ============================ -->
+    <section class="contenidor">
+      <div class="crida apareix">
+        <span class="avantitol">Comença ara</span>
+        <h2>Aquest dissabte, <em>de mercat?</em></h2>
+        <p>Descarrega MàrCAT i descobreix què se celebra a prop teu aquest cap de setmana.</p>
+        <div class="descarregues" data-descarregues>
+          <a class="boto brilla" data-boto="play"
+            href="https://play.google.com/store/apps/details?id=com.mercat.mercat&amp;referrer=utm_source%3Dweb"
+            target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M12 7.5v7m0 0-3-3m3 3 3-3"/><path d="M10.5 18.5h3"/></svg>
+            <span class="boto-text"><small>Per a Android</small>Descarrega-la a Google Play</span>
+          </a>
+          <a class="boto secundari" data-boto="web" href="https://app.marcat.app" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5S14.6 18.7 12 21.5C9.4 18.7 8.1 15.5 8.1 12S9.4 5.3 12 2.5Z"/></svg>
+            <span class="boto-text"><small>Per a iPhone i ordinador</small>Obre l'app web</span>
+          </a>
+        </div>
       </div>
-      <div class="feature-card">
-        <div class="icon">📊</div>
-        <h3>Per a organitzadors</h3>
-        <p>Publica el teu mercat, avisa de vacances o cancel·lacions
-          i consulta les estadístiques de visites.</p>
+    </section>
+
+  </main>
+
+  <!-- ================================ PEU ================================ -->
+  <footer class="peu">
+    <div class="contenidor">
+      <div>
+        <a class="marca" href="./">
+          <img src="assets/img/logo-128.png" alt="" width="36" height="36">
+          MàrCAT
+        </a>
+        <p class="lema">Els mercats de segona mà de Catalunya, a la butxaca.</p>
+        <div class="xarxes">
+          <a href="https://www.instagram.com/marcat.app/" target="_blank" rel="noopener">Instagram · @marcat.app</a>
+        </div>
       </div>
+      <div>
+        <h4>L'app</h4>
+        <ul>
+          <li><a href="https://play.google.com/store/apps/details?id=com.mercat.mercat&amp;referrer=utm_source%3Dweb" target="_blank" rel="noopener">Google Play</a></li>
+          <li><a href="https://app.marcat.app" target="_blank" rel="noopener">App web (iPhone i ordinador)</a></li>
+          <li><a href="#com-funciona">Com funciona</a></li>
+          <li><a href="#organitzadors">Per a organitzadors</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informació</h4>
+        <ul>
+          <li><a href="privacitat.html">Política de privacitat</a></li>
+          <li><a href="termes.html">Termes i condicions</a></li>
+          <li><a href="eliminar-compte.html">Eliminar el compte</a></li>
+          <li><a href="mailto:marcatapp.26@gmail.com">marcatapp.26@gmail.com</a></li>
+        </ul>
+      </div>
+      <p class="copy">© <span data-any>2026</span> MàrCAT · Fet amb ♥ a Catalunya</p>
     </div>
-  </div>
-
-  <footer class="footer">
-    <p>© 2026 MàrCAT ·
-      <a href="privacitat.html">Política de Privacitat</a> ·
-      <a href="termes.html">Termes i Condicions</a>
-    </p>
-    <p style="margin-top:8px;">Contacte: marcatapp.26@gmail.com</p>
   </footer>
 
+  <script src="assets/js/web.js"></script>
 </body>
 </html>

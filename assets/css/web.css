@@ -1,0 +1,1543 @@
+/* =====================================================================
+   MàrCAT · estils de la web (marcat.app)
+   Compartit per totes les pàgines: inici, privacitat, termes...
+   Colors de marca: crema, verd bosc, terracota i marró.
+   Fonts allotjades a la mateixa web (sense Google Fonts: no s'envia la
+   IP dels visitants a tercers).
+   ===================================================================== */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-600-italic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../fonts/fraunces-latin-700-italic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --crema: #FAF6F0;
+  --crema-fosc: #F1E9DD;
+  --paper: #FFFDF9;
+  --verd: #2D4A3E;
+  --verd-fosc: #1F352C;
+  --verd-clar: #4A7D62;
+  --terracota: #C97B3D;
+  --terracota-fosc: #A9622B;
+  --marro: #8B5E3C;
+  --text: #1F2A24;
+  --text-suau: #5E6660;
+  --linia: #E8E1D6;
+
+  --radi: 20px;
+  --radi-gran: 32px;
+  --ombra: 0 1px 2px rgba(31, 42, 36, .06), 0 8px 24px rgba(31, 42, 36, .08);
+  --ombra-gran: 0 30px 60px -20px rgba(31, 42, 36, .35);
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+
+  --amplada: 1160px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--crema);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 17px;
+  overflow-x: hidden;
+}
+
+/* La cinta inclinada i els avisos del mòbil sobresurten una mica:
+   es retallen aquí perquè mai aparegui scroll horitzontal. */
+main {
+  overflow-x: hidden;
+  overflow-x: clip;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--terracota);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.contenidor {
+  width: 100%;
+  max-width: var(--amplada);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------------------------------------------------------------------
+   Capçalera
+   --------------------------------------------------------------------- */
+
+.capcalera {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  transition: background .3s ease, box-shadow .3s ease;
+}
+
+.capcalera.amb-fons {
+  background: rgba(250, 246, 240, .86);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
+  backdrop-filter: saturate(160%) blur(14px);
+  box-shadow: 0 1px 0 var(--linia);
+}
+
+.capcalera .contenidor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 72px;
+}
+
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--verd);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -.01em;
+}
+
+.marca img {
+  width: 36px;
+  height: 36px;
+}
+
+.xarxes {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.xarxes a {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  color: var(--verd);
+  font-weight: 600;
+  font-size: 14px;
+  transition: background .2s, color .2s, transform .2s;
+}
+
+.xarxes a:hover {
+  background: var(--verd);
+  color: #fff;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-suau);
+  transition: color .2s;
+}
+
+.menu a:hover {
+  color: var(--verd);
+}
+
+.menu .boto-petit {
+  color: #fff;
+}
+
+/* ---------------------------------------------------------------------
+   Botons
+   --------------------------------------------------------------------- */
+
+.boto {
+  --fons: var(--verd);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  border-radius: 16px;
+  background: var(--fons);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.15;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s;
+  box-shadow: 0 10px 24px -10px rgba(31, 42, 36, .55);
+}
+
+.boto:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -12px rgba(31, 42, 36, .6);
+}
+
+.boto:active {
+  transform: translateY(0);
+}
+
+/* Lluentor que passa pel botó principal. */
+.boto.brilla::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 30%,
+      rgba(255, 255, 255, .28) 50%, transparent 70%);
+  transform: translateX(-120%);
+  animation: lluentor 4.5s ease-in-out 1.2s infinite;
+}
+
+@keyframes lluentor {
+  0%, 60% {
+    transform: translateX(-120%);
+  }
+  80%, 100% {
+    transform: translateX(120%);
+  }
+}
+
+.boto svg {
+  flex: none;
+  width: 26px;
+  height: 26px;
+}
+
+.boto .boto-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.boto .boto-text small {
+  font-size: 11.5px;
+  font-weight: 500;
+  opacity: .8;
+  letter-spacing: .02em;
+}
+
+.boto.secundari {
+  --fons: var(--paper);
+  color: var(--verd);
+  box-shadow: inset 0 0 0 2px var(--verd), 0 10px 24px -14px rgba(31, 42, 36, .4);
+}
+
+.boto.terracota {
+  --fons: var(--terracota);
+}
+
+.boto.terracota:hover {
+  --fons: var(--terracota-fosc);
+}
+
+.boto-petit {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 16px;
+  border-radius: 12px;
+  background: var(--verd);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+
+.boto-petit:hover {
+  background: var(--verd-fosc);
+  transform: translateY(-1px);
+}
+
+/* ---------------------------------------------------------------------
+   Hero
+   --------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  padding: 36px 0 72px;
+  overflow: hidden;
+}
+
+/* Taques de color de fons que es mouen molt a poc a poc. */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: .55;
+  z-index: -1;
+  animation: deriva 18s ease-in-out infinite alternate;
+}
+
+.hero::before {
+  width: 520px;
+  height: 520px;
+  background: #EBC9A6;
+  top: -160px;
+  right: -120px;
+}
+
+.hero::after {
+  width: 460px;
+  height: 460px;
+  background: #CFE0D2;
+  bottom: -200px;
+  left: -160px;
+  animation-delay: -9s;
+}
+
+@keyframes deriva {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(40px, 30px) scale(1.08);
+  }
+}
+
+.hero .contenidor {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 7px 8px;
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--verd);
+}
+
+.etiqueta .punt {
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--verd-clar);
+  color: #fff;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(40px, 5.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -.025em;
+  color: var(--verd);
+  margin: 22px 0 18px;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--terracota);
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Subratllat dibuixat a mà sota la paraula destacada. */
+.hero h1 em svg {
+  position: absolute;
+  left: -2%;
+  bottom: -.12em;
+  width: 104%;
+  height: .32em;
+  overflow: visible;
+}
+
+.hero h1 em svg path {
+  stroke: var(--terracota);
+  stroke-width: 6;
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 420;
+  stroke-dashoffset: 420;
+  animation: dibuixa 1.1s cubic-bezier(.65, 0, .35, 1) .7s forwards;
+}
+
+@keyframes dibuixa {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero .entradeta {
+  font-size: clamp(17px, 1.6vw, 20px);
+  color: var(--text-suau);
+  max-width: 540px;
+  margin: 0 0 30px;
+}
+
+.descarregues {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.nota-plataforma {
+  margin: 16px 0 0;
+  font-size: 14.5px;
+  color: var(--text-suau);
+  max-width: 520px;
+}
+
+.nota-plataforma strong {
+  color: var(--verd);
+}
+
+/* Passos per afegir la PWA a l'iPhone (només es mostra a iPhone). */
+.passos-iphone {
+  display: none;
+  margin: 18px 0 0;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  font-size: 14.5px;
+  max-width: 460px;
+}
+
+.passos-iphone ol {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+
+.es-iphone .passos-iphone {
+  display: block;
+}
+
+/* QR per escanejar des de l'ordinador (només escriptori). */
+.qr {
+  display: none;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+  font-size: 14px;
+  color: var(--text-suau);
+}
+
+.qr img {
+  width: 84px;
+  height: 84px;
+  border-radius: 12px;
+  box-shadow: var(--ombra);
+}
+
+.es-escriptori .qr {
+  display: flex;
+}
+
+.xifres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 34px;
+  padding-top: 26px;
+  border-top: 1px dashed var(--linia);
+}
+
+.xifra strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 30px;
+  line-height: 1;
+  color: var(--verd);
+}
+
+.xifra span {
+  font-size: 13.5px;
+  color: var(--text-suau);
+}
+
+/* ---------------------------------------------------------------------
+   Mòbil de mostra (fet amb CSS, sense captures)
+   --------------------------------------------------------------------- */
+
+.escena {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 600px;
+}
+
+.mobil {
+  position: relative;
+  width: 300px;
+  height: 610px;
+  border-radius: 46px;
+  background: #121815;
+  padding: 12px;
+  box-shadow: var(--ombra-gran), inset 0 0 0 2px #2b332f;
+  animation: flota 6s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes flota {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(-1deg);
+  }
+}
+
+.mobil .pantalla {
+  position: relative;
+  height: 100%;
+  border-radius: 36px;
+  overflow: hidden;
+  background: var(--crema);
+}
+
+.mobil .illa {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 92px;
+  height: 26px;
+  border-radius: 20px;
+  background: #121815;
+  z-index: 3;
+}
+
+.app-barra {
+  padding: 46px 18px 12px;
+  background: var(--verd);
+  color: #fff;
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.app-filtres {
+  display: flex;
+  gap: 6px;
+  padding: 10px 12px;
+  overflow: hidden;
+}
+
+.app-filtres span {
+  flex: none;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  box-shadow: inset 0 0 0 1.5px var(--linia);
+  color: var(--text);
+  background: var(--paper);
+}
+
+.app-filtres span.actiu {
+  background: var(--terracota);
+  color: #fff;
+  box-shadow: none;
+}
+
+.app-llista {
+  padding: 2px 12px;
+  display: grid;
+  gap: 10px;
+  animation: desplaca 14s ease-in-out infinite;
+}
+
+@keyframes desplaca {
+  0%, 25% {
+    transform: translateY(0);
+  }
+  45%, 70% {
+    transform: translateY(-118px);
+  }
+  90%, 100% {
+    transform: translateY(0);
+  }
+}
+
+.targeta-app {
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(31, 42, 36, .08);
+}
+
+.targeta-app .verificat {
+  padding: 4px 10px;
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--verd-clar);
+}
+
+.targeta-app .foto {
+  height: 74px;
+  position: relative;
+}
+
+.targeta-app .foto .data {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--terracota);
+  color: #fff;
+  font-size: 9.5px;
+  font-weight: 700;
+}
+
+.targeta-app .cos {
+  padding: 8px 10px 10px;
+}
+
+.targeta-app h4 {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.targeta-app p {
+  margin: 2px 0 0;
+  font-size: 10.5px;
+  color: var(--text-suau);
+}
+
+.f1 {
+  background:
+    radial-gradient(circle at 20% 120%, #E9B98C 0 35%, transparent 36%),
+    radial-gradient(circle at 80% -20%, #B9D3BF 0 40%, transparent 41%),
+    repeating-linear-gradient(90deg, #F3DFC7 0 14px, #EFD3B2 14px 28px);
+}
+
+.f2 {
+  background:
+    radial-gradient(circle at 75% 110%, #8FB59D 0 40%, transparent 41%),
+    repeating-linear-gradient(135deg, #E4D2BE 0 10px, #DCC6AE 10px 20px);
+}
+
+.f3 {
+  background:
+    radial-gradient(circle at 30% -10%, #F0C9A4 0 38%, transparent 39%),
+    repeating-linear-gradient(45deg, #D7E4D9 0 12px, #CADBCD 12px 24px);
+}
+
+.f4 {
+  background:
+    radial-gradient(circle at 60% 120%, #C97B3D 0 30%, transparent 31%),
+    repeating-linear-gradient(0deg, #F5E6D3 0 10px, #EEDCC5 10px 20px);
+}
+
+.app-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 6px 16px;
+  background: #fff;
+  box-shadow: 0 -1px 0 var(--linia);
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--text-suau);
+}
+
+.app-nav span.actiu {
+  color: var(--verd);
+}
+
+/* Avisos flotants al voltant del mòbil. */
+.avis {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: var(--ombra);
+  font-size: 13px;
+  line-height: 1.3;
+  max-width: 240px;
+  animation: flota-avis 7s ease-in-out infinite;
+}
+
+.avis b {
+  display: block;
+  color: var(--verd);
+  font-size: 13px;
+}
+
+.avis .ico {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  font-size: 17px;
+  background: var(--crema-fosc);
+}
+
+.avis.a1 {
+  top: 250px;
+  left: -40px;
+}
+
+.avis.a2 {
+  bottom: 110px;
+  right: -16px;
+  animation-delay: -3.5s;
+}
+
+.avis.a3 {
+  bottom: 30px;
+  left: 6px;
+  animation-delay: -1.8s;
+}
+
+@keyframes flota-avis {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Cinta de categories
+   --------------------------------------------------------------------- */
+
+.cinta {
+  background: var(--verd);
+  color: var(--crema);
+  padding: 18px 0;
+  overflow: hidden;
+  transform: rotate(-1.2deg);
+  margin: 0 -20px;
+  box-shadow: 0 10px 30px -15px rgba(31, 42, 36, .5);
+}
+
+.cinta .pista {
+  display: flex;
+  gap: 42px;
+  width: max-content;
+  animation: cinta 38s linear infinite;
+  font-family: var(--serif);
+  font-size: 26px;
+  font-style: italic;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.cinta .pista span::after {
+  content: "✦";
+  margin-left: 42px;
+  font-style: normal;
+  color: var(--terracota);
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+@keyframes cinta {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Seccions
+   --------------------------------------------------------------------- */
+
+.seccio {
+  padding: 110px 0;
+}
+
+.capcal-seccio {
+  max-width: 680px;
+  margin-bottom: 56px;
+}
+
+.capcal-seccio.centrat {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.avantitol {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--terracota);
+  margin-bottom: 12px;
+}
+
+.seccio h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(32px, 4.2vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--verd);
+  margin: 0 0 16px;
+}
+
+.seccio h2 em {
+  color: var(--terracota);
+}
+
+.capcal-seccio p {
+  margin: 0;
+  color: var(--text-suau);
+  font-size: 18px;
+}
+
+/* Passos "Com funciona" */
+.passos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  counter-reset: pas;
+}
+
+.pas {
+  position: relative;
+  padding: 34px 28px 30px;
+  border-radius: var(--radi-gran);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.pas:hover {
+  transform: translateY(-6px);
+  box-shadow: inset 0 0 0 1px var(--linia), var(--ombra);
+}
+
+.pas::before {
+  counter-increment: pas;
+  content: "0" counter(pas);
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--crema-fosc);
+  position: absolute;
+  top: 22px;
+  right: 26px;
+}
+
+.pas .ico-gran {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 18px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  background: var(--crema-fosc);
+}
+
+.pas h3 {
+  font-family: var(--serif);
+  font-size: 26px;
+  margin: 0 0 8px;
+  color: var(--verd);
+}
+
+.pas p {
+  margin: 0;
+  color: var(--text-suau);
+}
+
+/* Graella de funcions (bento) */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+.caixa {
+  grid-column: span 2;
+  padding: 30px;
+  border-radius: var(--radi-gran);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  overflow: hidden;
+  position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.caixa:hover {
+  transform: translateY(-4px);
+  box-shadow: inset 0 0 0 1px var(--linia), var(--ombra);
+}
+
+.caixa.ampla {
+  grid-column: span 3;
+}
+
+.caixa.verda {
+  background: var(--verd);
+  color: var(--crema);
+  box-shadow: none;
+}
+
+.caixa.verda h3 {
+  color: #fff;
+}
+
+.caixa.verda p {
+  color: rgba(250, 246, 240, .8);
+}
+
+.caixa.terracota {
+  background: var(--terracota);
+  color: #fff;
+  box-shadow: none;
+}
+
+.caixa.terracota h3 {
+  color: #fff;
+}
+
+.caixa.terracota p {
+  color: rgba(255, 255, 255, .88);
+}
+
+.caixa .ico {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.caixa h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: var(--verd);
+}
+
+.caixa p {
+  margin: 0;
+  color: var(--text-suau);
+}
+
+/* Mini-notificació dins d'una caixa */
+.mini-notif {
+  margin-top: 22px;
+  display: grid;
+  gap: 8px;
+}
+
+.mini-notif div {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .1);
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+.mini-notif b {
+  display: block;
+  font-size: 12px;
+  opacity: .75;
+  font-weight: 600;
+}
+
+.segell {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: rgba(74, 125, 98, .12);
+  color: var(--verd);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------------------------------------------------------------------
+   Organitzadors
+   --------------------------------------------------------------------- */
+
+.organitzadors {
+  background: var(--verd);
+  color: var(--crema);
+  border-radius: 48px;
+  margin: 0 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.organitzadors::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -180px;
+  top: -200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 123, 61, .45), transparent 65%);
+}
+
+.organitzadors h2 {
+  color: #fff;
+}
+
+.organitzadors .capcal-seccio p {
+  color: rgba(250, 246, 240, .78);
+}
+
+.organitzadors .avantitol {
+  color: #EBC9A6;
+}
+
+.org-graella {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  position: relative;
+}
+
+.org-item {
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, .07);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .1);
+  transition: background .3s;
+}
+
+.org-item:hover {
+  background: rgba(255, 255, 255, .12);
+}
+
+.org-item .ico {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.org-item h3 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.org-item p {
+  margin: 0;
+  font-size: 15px;
+  color: rgba(250, 246, 240, .75);
+}
+
+.org-cta {
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+}
+
+.org-cta p {
+  margin: 0;
+  color: rgba(250, 246, 240, .8);
+  font-size: 15px;
+}
+
+.org-cta a.enllac {
+  color: #EBC9A6;
+  font-weight: 600;
+}
+
+/* ---------------------------------------------------------------------
+   Valors
+   --------------------------------------------------------------------- */
+
+.valors {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.valor {
+  text-align: center;
+  padding: 10px 8px;
+}
+
+.valor .cercle {
+  width: 84px;
+  height: 84px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 34px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  transition: transform .4s cubic-bezier(.34, 1.56, .64, 1);
+}
+
+.valor:hover .cercle {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.valor h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--verd);
+  margin: 0 0 6px;
+}
+
+.valor p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-suau);
+}
+
+/* ---------------------------------------------------------------------
+   Crida final
+   --------------------------------------------------------------------- */
+
+.crida {
+  text-align: center;
+  padding: 72px 28px;
+  border-radius: 48px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(201, 123, 61, .18), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(74, 125, 98, .18), transparent 40%),
+    var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+}
+
+.crida h2 {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: clamp(32px, 4.2vw, 50px);
+  line-height: 1.08;
+  letter-spacing: -.02em;
+  color: var(--verd);
+  margin: 0 0 12px;
+}
+
+.crida h2 em {
+  color: var(--terracota);
+}
+
+.crida p {
+  color: var(--text-suau);
+  margin: 0 auto 30px;
+  max-width: 520px;
+}
+
+.crida .descarregues {
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------------------
+   Peu
+   --------------------------------------------------------------------- */
+
+.peu {
+  margin-top: 110px;
+  padding: 56px 0 40px;
+  border-top: 1px solid var(--linia);
+  font-size: 15px;
+  color: var(--text-suau);
+}
+
+.peu .contenidor {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+}
+
+.peu h4 {
+  margin: 0 0 12px;
+  font-size: 13px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--verd);
+}
+
+.peu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.peu a {
+  text-decoration: none;
+}
+
+.peu a:hover {
+  color: var(--verd);
+  text-decoration: underline;
+}
+
+.peu .lema {
+  margin: 12px 0 0;
+  max-width: 320px;
+}
+
+.peu .copy {
+  grid-column: 1 / -1;
+  padding-top: 24px;
+  border-top: 1px dashed var(--linia);
+  font-size: 13.5px;
+}
+
+/* ---------------------------------------------------------------------
+   Pàgines de text (privacitat, termes...)
+   --------------------------------------------------------------------- */
+
+.document {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 48px 24px 0;
+}
+
+.document .capcal-doc {
+  padding: 40px 36px;
+  border-radius: var(--radi-gran);
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  margin-bottom: 40px;
+}
+
+.document h1 {
+  font-family: var(--serif);
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.05;
+  color: var(--verd);
+  margin: 0 0 10px;
+}
+
+.document .data-actualitzacio {
+  color: var(--text-suau);
+  font-size: 15px;
+  margin: 0;
+}
+
+.document h2 {
+  font-family: var(--serif);
+  font-size: 26px;
+  color: var(--verd);
+  margin: 44px 0 12px;
+  scroll-margin-top: 90px;
+}
+
+.document h3 {
+  font-size: 17px;
+  color: var(--marro);
+  margin: 24px 0 8px;
+}
+
+.document p,
+.document li {
+  color: #2E3832;
+}
+
+.document ul,
+.document ol {
+  padding-left: 22px;
+}
+
+.document li {
+  margin-bottom: 8px;
+}
+
+.document a {
+  color: var(--terracota-fosc);
+}
+
+.document .nota {
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(201, 123, 61, .1);
+  border-left: 4px solid var(--terracota);
+  font-size: 15px;
+  margin: 24px 0;
+}
+
+.document table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  margin: 16px 0;
+}
+
+.document th,
+.document td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--linia);
+  vertical-align: top;
+}
+
+.document th {
+  color: var(--verd);
+  font-size: 13px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.index-doc {
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: inset 0 0 0 1px var(--linia);
+  font-size: 15px;
+}
+
+.index-doc ol {
+  margin: 8px 0 0;
+  columns: 2;
+  column-gap: 28px;
+}
+
+/* ---------------------------------------------------------------------
+   Aparició en fer scroll
+   --------------------------------------------------------------------- */
+
+.apareix {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+  transition-delay: var(--retard, 0s);
+}
+
+.apareix.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Sense JavaScript, tot visible. */
+.sense-js .apareix {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------------------------------------------------------------------
+   Responsive
+   --------------------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  .hero .contenidor {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .escena {
+    min-height: 540px;
+  }
+
+  .passos {
+    grid-template-columns: 1fr;
+  }
+
+  .bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .caixa,
+  .caixa.ampla {
+    grid-column: span 1;
+  }
+
+  .caixa.tota {
+    grid-column: 1 / -1;
+  }
+
+  .valors {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 36px;
+  }
+
+  .org-graella {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .peu .contenidor {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .peu .contenidor > div:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 16px;
+  }
+
+  .menu a:not(.boto-petit) {
+    display: none;
+  }
+
+  .hero {
+    padding: 18px 0 56px;
+  }
+
+  .descarregues .boto {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .escena {
+    min-height: 500px;
+    transform: scale(.88);
+    margin: -30px 0 -40px;
+  }
+
+  .avis.a1 {
+    left: -18px;
+  }
+
+  .avis.a2 {
+    right: -22px;
+  }
+
+  .seccio {
+    padding: 80px 0;
+  }
+
+  .bento {
+    grid-template-columns: 1fr;
+  }
+
+  .org-graella {
+    grid-template-columns: 1fr;
+  }
+
+  .avis.a1 {
+    top: 200px;
+  }
+
+  .organitzadors,
+  .crida {
+    border-radius: 32px;
+  }
+
+  .organitzadors {
+    margin: 0 8px;
+  }
+
+  .cinta .pista {
+    font-size: 21px;
+  }
+
+  .index-doc ol {
+    columns: 1;
+  }
+
+  .document .capcal-doc {
+    padding: 28px 22px;
+  }
+}
+
+/* Qui ha demanat menys moviment al sistema: sense animacions. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .apareix {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero h1 em svg path {
+    stroke-dashoffset: 0;
+  }
+}
