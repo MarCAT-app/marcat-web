@@ -32,12 +32,12 @@
     <div class="capcal-doc">
       <span class="avantitol">Informació legal</span>
       <h1>Política de privacitat</h1>
-      <p class="data-actualitzacio">Última actualització: 23 d'octubre de 2026</p>
+      <p class="data-actualitzacio">Última actualització: 9 de novembre de 2026</p>
     </div>
 
     <p>Aquesta política explica com es tracten les teves dades personals
-      quan fas servir <strong>MàrCAT</strong>: l'aplicació per a Android,
-      la versió web (<a href="https://app.marcat.app">app.marcat.app</a>)
+      quan fas servir <strong>MàrCAT</strong>: les aplicacions per a Android
+      i iPhone, la versió web (<a href="https://app.marcat.app">app.marcat.app</a>)
       i aquesta pàgina web (<a href="https://marcat.app">marcat.app</a>).
       L'hem escrit perquè s'entengui: si tens cap dubte, escriu-nos.</p>
 
@@ -73,7 +73,11 @@
     <ul>
       <li><strong>Compte:</strong> correu electrònic, nom, cognom, nom
         d'usuari (opcional) i, si vols, foto de perfil. Si entres amb
-        Google, rebem el correu, el nom i la foto del teu compte de Google.</li>
+        Google, rebem el correu, el nom i la foto del teu compte de Google.
+        Si entres amb Apple, rebem el correu (o una adreça de reenviament
+        privada d'Apple, si tries amagar el teu) i, si ho autoritzes, el nom.
+        A l'app per a iPhone també pots consultar els mercats sense crear
+        cap compte: en aquest cas no guardem cap dada que t'identifiqui.</li>
       <li><strong>Preferències:</strong> les províncies de les quals vols
         rebre avisos i si vols rebre el «Resum del cap de setmana» o, si
         ets organitzador/a, els recordatoris per revisar els teus mercats.</li>
@@ -102,20 +106,22 @@
       <li><strong>Identificador de notificacions:</strong> un codi tècnic
         de cada dispositiu (o navegador) on tens la sessió iniciada,
         necessari per enviar-te notificacions.</li>
-      <li><strong>Dades d'ús de l'app per a Android:</strong> fem servir
+      <li><strong>Dades d'ús de les apps per a Android i iPhone:</strong> fem servir
         Google Analytics per a Firebase per saber, de manera agregada,
         quantes persones fan servir l'app, en quins dispositius i quines
         pantalles es visiten més. Fa servir un identificador de
-        l'aplicació (no el teu nom ni el teu correu). No es fa servir
-        per a publicitat.</li>
+        l'aplicació (no el teu nom ni el teu correu) i, a partir de
+        l'adreça IP, Google en dedueix una ubicació aproximada (ciutat o
+        país) per a les estadístiques. No es fa servir per a publicitat
+        ni per fer-te seguiment en altres apps o webs.</li>
       <li><strong>Plataforma i últim accés:</strong> quan obres MàrCAT
         amb la sessió iniciada, guardem al teu compte des de quin tipus de
-        dispositiu hi has entrat (app per a Android, web a l'iPhone, web a
-        Android o ordinador) i la data de l'últim accés a cadascun, i sumem
+        dispositiu hi has entrat (app per a Android, app per a iPhone, web
+        a l'iPhone, web a Android o ordinador) i la data de l'últim accés a cadascun, i sumem
         1 a un comptador diari per plataforma. Es fa com a molt un cop al
         dia, <strong>sense galetes</strong>, i només ho fem servir per saber
         quanta gent fa servir cada versió de l'app (per exemple, per decidir
-        si fem una app per a iPhone).</li>
+        a quina dedicar més esforç).</li>
       <li><strong>Estadístiques dels mercats:</strong> comptem quantes
         vegades s'obre la fitxa de cada mercat i quantes vegades es toquen
         els botons («Com arribar-hi», compartir, contactar, web,
@@ -193,9 +199,14 @@
         allotjament de la versió web i Google Analytics per a Firebase.</li>
       <li><strong>Google (Gmail):</strong> recepció dels missatges de suport
         i de les sol·licituds.</li>
-      <li><strong>OpenStreetMap (servei Nominatim):</strong> quan un
-        organitzador/a escriu l'adreça d'un mercat, s'hi envia aquesta
-        adreça per trobar-ne les coordenades.</li>
+      <li><strong>Apple:</strong> inici de sessió amb Apple (si el fas
+        servir) i enviament de notificacions a l'app per a iPhone (Apple
+        Push Notification service).</li>
+      <li><strong>OpenStreetMap:</strong> quan un organitzador/a escriu
+        l'adreça d'un mercat, s'hi envia aquesta adreça per trobar-ne les
+        coordenades (servei Nominatim). A més, el mapa de la pantalla
+        «Cercar» es carrega des dels servidors d'OpenStreetMap, que reben
+        l'adreça IP del dispositiu per poder-ne servir les imatges.</li>
       <li><strong>GitHub:</strong> allotjament d'aquesta pàgina web
         (marcat.app).</li>
     </ul>
@@ -207,7 +218,7 @@
       exigeixi la llei.</p>
 
     <h2 id="transferencies">7. On s'emmagatzemen</h2>
-    <p>Les dades es guarden als servidors de Google Firebase. Google i
+    <p>Les dades es guarden als servidors de Google Firebase. Google, Apple i
       GitHub poden tractar dades fora de l'Espai Econòmic Europeu (per
       exemple, als Estats Units). En aquests casos, les transferències es
       fan amb les garanties del RGPD: el Marc de Privacitat de Dades
